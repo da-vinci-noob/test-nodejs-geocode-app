@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const { dir } = require('console')
 
 const app = express()
+const port = process.env.port || 3000
 
 // Path Definitions
 const viewsPath = path.join(__dirname, '../hbs-templates/views')
@@ -55,6 +56,6 @@ app.get('*', (req, res) => {
   res.send('Content Not Found!!!')
 })
 
-app.listen(3000, () => {
-  console.log('Server Running!!! on port 3000')
+app.listen(port, () => {
+  console.log(`Server Running!!! on port ${port}`)
 })
