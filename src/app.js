@@ -5,7 +5,7 @@ const geocode = require('./utils/geocode')
 const { dir } = require('console')
 
 const app = express()
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 // Path Definitions
 const viewsPath = path.join(__dirname, '../hbs-templates/views')
